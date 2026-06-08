@@ -63,6 +63,10 @@ const io = new Server(server, {
 
 app.use(express.json());
 
+app.get('/', (req, res) => {
+    res.send('Real Time Collab Tool Backend Running 🚀');
+});
+
 // Attach io to req
 app.use((req, res, next) => {
     req.io = io;
